@@ -360,7 +360,25 @@ form .btn-enviar input {
 }
 
 
-@media screen and (max-width: 1020px) {
+/* Estilos gerais para telas menores que 1020px */
+@media screen and (max-width: 1019px) {
+    /* Esconda o menu lateral e exiba o menu móvel */
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .btn-abrir-menu {
+        display: block;
+    }
+
+    .menu-lateral {
+        display: none;
+    }
 
     /* CLASSES GERAIS */
     .flex {
@@ -376,15 +394,9 @@ form .btn-enviar input {
         line-height: 30px;
     }
 
-    /* CABEÇALHO */
-    .menu-desktop,
-    .btn-contato {
-        display: none;
-    }
-
     /* TOPO DO SITE */
     section.topo-do-site {
-        padding: 20px 8;
+        padding: 20px 8px; /* Corrigido de 20px 8 para 20px 8px */
     }
 
     .topo-do-site h1 {
@@ -426,5 +438,48 @@ form .btn-enviar input {
 
     .img-sobre img {
         width: 100%;
+    }
+
+    .abrir-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 1000;
+    }
+
+    .overlay-menu.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+}
+
+/* Estilos para telas a partir de 1020px */
+@media screen and (min-width: 1020px) {
+    /* Exiba o menu lateral e esconda o menu móvel */
+    .menu-lateral {
+        display: block;
+    }
+
+    .menu-desktop,
+    .btn-contato {
+        display: block;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .btn-abrir-menu {
+        display: none;
     }
 }
