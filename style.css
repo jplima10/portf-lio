@@ -325,7 +325,7 @@ form {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; /* Ajuste o gap entre todos os elementos do formulário */
     margin-top: 40px;
 }
 
@@ -343,6 +343,7 @@ form textarea {
 
 form textarea {
     resize: none;
+    margin-top: 1px;
 }
 
 form .btn-enviar {
@@ -359,10 +360,8 @@ form .btn-enviar input {
     transition: .2s;
 }
 
-
-/* Estilos gerais para telas menores que 1020px */
-@media screen and (max-width: 1019px) {
-    /* Esconda o menu lateral e exiba o menu móvel */
+/* Estilos gerais para telas menores que 1280px */
+@media screen and (max-width: 1279px) {
     .menu-desktop,
     .btn-contato {
         display: none;
@@ -380,7 +379,6 @@ form .btn-enviar input {
         display: none;
     }
 
-    /* CLASSES GERAIS */
     .flex {
         flex-direction: column;
     }
@@ -394,9 +392,8 @@ form .btn-enviar input {
         line-height: 30px;
     }
 
-    /* TOPO DO SITE */
     section.topo-do-site {
-        padding: 20px 8px; /* Corrigido de 20px 8 para 20px 8px */
+        padding: 20px 8px;
     }
 
     .topo-do-site h1 {
@@ -411,13 +408,11 @@ form .btn-enviar input {
         gap: 40px;
     }
 
-    /* ESPECIALIDADES */
     section.especialidades {
         padding: 40px 8%;
         padding-top: 20px;
     }
 
-    /* SOBRE */
     section.sobre {
         padding: 80px 8%;
     }
@@ -461,11 +456,14 @@ form .btn-enviar input {
         background: rgba(0, 0, 0, 0.5);
         z-index: 999;
     }
+
+    .btn-social a {
+        color: #000;
+    }
 }
 
-/* Estilos para telas a partir de 1020px */
-@media screen and (min-width: 1020px) {
-    /* Exiba o menu lateral e esconda o menu móvel */
+/* Estilos para telas a partir de 1280px */
+@media screen and (min-width: 1280px) {
     .menu-lateral {
         display: block;
     }
