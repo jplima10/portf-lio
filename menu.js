@@ -19,10 +19,21 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
 
-// Fechar menu ao clicar em um link
+
 menuLinks.forEach(link => {
     link.addEventListener('click', () => {
         menu.classList.remove('abrir-menu');
         overlay.classList.remove('active');
     });
 });
+
+
+// Scroll Reveal 
+window.revelar = ScrollReval({
+    reset:true
+})
+
+revelar.reveal('.txt-topo-site', {
+    duration: 2000,
+    distance:  '90px'
+})

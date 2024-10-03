@@ -325,7 +325,7 @@ form {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 10px; /* Ajuste o gap entre todos os elementos do formulário */
+    gap: 10px; 
     margin-top: 40px;
 }
 
@@ -360,6 +360,30 @@ form .btn-enviar input {
     transition: .2s;
 }
 
+/*  Estilo página sucesso */ 
+section.success-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section.success-message h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white
+}
+
+section.success-message a {
+    text-decoration: none;
+    color: #00FF08;
+}
+
+section.success-message span {
+    color: #00FF08;
+}
 /* Estilos gerais para telas menores que 1280px */
 @media screen and (max-width: 1279px) {
     .menu-desktop,
