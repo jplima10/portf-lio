@@ -384,6 +384,23 @@ section.success-message a {
 section.success-message span {
     color: #00FF08;
 }
+
+/*  Scroll Reveal */
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(30%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transition: all 2s;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+
 /* Estilos gerais para telas menores que 1280px */
 @media screen and (max-width: 1279px) {
     .menu-desktop,

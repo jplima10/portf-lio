@@ -28,12 +28,16 @@ menuLinks.forEach(link => {
 });
 
 
-// Scroll Reveal 
-window.revelar = ScrollReval({
-    reset:true
+const myObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) =>{
+        if (entry.isIntersecting == true ){
+            entry.target.classList.add('show')
+        } else {
+            entry.target.classList.remove('show')
+        }
+    })
 })
 
-revelar.reveal('.txt-topo-site', {
-    duration: 2000,
-    distance:  '90px'
-})
+const elements = document.querySelectorAll('.hidden')
+
+elements.forEach((element) => myObserver.observe(element))
